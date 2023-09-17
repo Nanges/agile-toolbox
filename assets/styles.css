@@ -83,7 +83,7 @@ body{
 
 #main-footer > *:not(:last-child)::after{
     content:' ';
-    margin-right: 1rem;
+    margin-right: .75rem;
 }
 
 #main-footer a{
