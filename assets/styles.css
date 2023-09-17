@@ -63,7 +63,7 @@ main{
 
 /* banner */
 #banner{
-    height:400px;
+    height:300px;
     position: relative;
     margin-bottom: 2.5rem;
 }
@@ -95,7 +95,7 @@ main{
 #medias{
     justify-content: center;
     display:flex;
-    gap:1rem;
+    gap:3rem;
 }
 
 #medias a{
@@ -122,7 +122,7 @@ main{
 /* footer */
 #main-footer{
     padding:1.5rem;
-    background-color:#eee;
+    background-color:#fff196;
     display: flex;
     justify-content: center;
     gap:1rem;
