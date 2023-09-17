@@ -1,3 +1,11 @@
+/* fonts */
+@font-face {
+    font-family: "KirangHaerang";
+    src: url('KirangHaerang-Regular.ttf');
+}
+
+/* mobile first */
+
 body{
     font-family: sans-serif;
     min-height: 100vh;
@@ -6,127 +14,76 @@ body{
     flex-direction: column;
 }
 
-main{
+#content-wrapper{
     flex-grow: 1;
-}
-
-/* fonts */
-@font-face {
-    font-family: "KirangHaerang";
-    src: url('KirangHaerang-Regular.ttf');
-}
-
-/* content */
-#content{
-    flex-grow: 1;
-    flex-shrink: 0;
-}
-
-/* container */
-.container{
-    margin:auto;
-    width:1140px;
-}
-
-/* header */
-#main-header{
-    font-family: "KirangHaerang";
-    padding-top:1rem;
-    padding-bottom:1rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
-}
-
-#main-header::after{
-    content:'';
-    display:block;
-    clear:both;
-}
-
-#main-header > div{
-    float:left;
-}
-
-#main-header h1{
-    font-size: 4rem;
-    margin:0;
-    padding:0;
-}
-
-#main-header p{
-    font-size: 2rem;
-    text-align: right;
-    color:#777;
-    margin:0;
-    padding:0;
-}
-
-/* banner */
-#banner{
-    height:300px;
-    position: relative;
-    margin-bottom: 2.5rem;
-}
-
-#banner > .banner-bg{
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    opacity:.5;
-    background-image: url('banner.webp');
-    background-size: cover;
-    background-position: center;
-}
-
-#banner > .banner-content{
-    position: absolute;
-    z-index:1;
-    bottom:1rem;
-    right:1rem;
-}
-
-#banner .logo{
-    height:80px;
-}
-
-/* media */
-#medias{
-    justify-content: center;
     display:flex;
-    gap:3rem;
-}
-
-#medias a{
-    display:flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width:100px;
-    height:100px;
-    text-decoration: none;
-    font-size:2.5rem;
-    border:3px solid #000;
-    color:#000;
-    transition: font-size .2s ease-out;
+    justify-content: center;
+    padding-left:16px;
+    padding-right:16px;
 }
 
-#medias a:focus-within,
-#medias a:hover{
-    font-size: 3rem;
-    color:#ff9e4a;
-    border-color: #ff9e4a;
-    outline: none;
+#content-wrapper header{
+    text-align: center;
+    font-family: "KirangHaerang";
+    font-size: 2rem;
+}
+
+#content-wrapper header p{
+    color:#666;
+}
+
+#content-wrapper main{
+    width:100%;
+}
+
+#logo{
+    width:100%;
+}
+
+#medias-nav{
+    margin-top:32px;
+}
+
+#medias-nav li:not(:first-child){
+    margin-top:1rem;
+}
+
+
+#medias-nav a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    border:1px solid #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#medias-nav a:hover,
+#medias-nav a:focus-visible{
+    border-width:3px;
+    background-color: #f5f5f5;
+}
+
+.media-logo{
+    height:24px;
 }
 
 /* footer */
 #main-footer{
     padding:1.5rem;
-    background-color:#fff196;
+    background-color:#eee;
     display: flex;
     justify-content: center;
-    gap:1rem;
     font-size: .75rem;
+}
+
+#main-footer > *:not(:last-child)::after{
+    content:' ';
+    margin-right: 1rem;
 }
 
 #main-footer a{
@@ -139,5 +96,28 @@ main{
     text-decoration: underline;
 }
 
-/* utils */
-.mr-4{ margin-right:1rem; }
+/* desktop and other devices */
+
+@media (min-width: 640px) {
+    #content-wrapper{
+        padding-bottom: 200px;
+    }
+
+    #logo{
+        width:400px;
+    }
+
+    #medias-nav{
+        display:flex;
+        justify-content: center;
+    }
+    
+    #medias-nav li{
+        width:200px;
+    }
+
+    #medias-nav li:not(:first-child){
+        margin-top: 0px;
+        margin-left:1.5rem;
+    }
+}
