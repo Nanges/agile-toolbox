@@ -74,16 +74,19 @@ body{
 
 /* footer */
 #main-footer{
-    padding:1.5rem;
+    padding:1.5rem 1rem;
     background-color:#eee;
-    display: flex;
+    display:flex;
     justify-content: center;
+    align-items: center;
     font-size: .75rem;
 }
 
-#main-footer > *:not(:last-child)::after{
-    content:' ';
-    margin-right: .75rem;
+
+#main-footer ul{
+    margin-left:.5rem;
+    padding-left: .5rem;
+    border-left: 1px solid #777;
 }
 
 #main-footer a{
